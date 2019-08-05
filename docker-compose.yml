@@ -1,0 +1,14 @@
+version: '3'
+services:
+  client:
+    build: ./client
+    ports: 
+      - 3000:3000
+    container_name: react-express-client
+    depends_on:
+      - server
+  server:
+    build: ./
+    ports:
+      - 5000:5000
+    container_name: react-express-server

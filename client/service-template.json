@@ -1,0 +1,28 @@
+{
+  "name": "anobis-ui",
+  "pod": "dp-platform",
+  "version": "1.0.5",
+  "spec": [
+    {
+      "type": "container",
+      "name": "",
+      "image": "anobis-ui/anobis-ui:1.3.1",
+      "appPort": 80,
+      "appProtocol": "http",
+      "healthPort":  80,
+      "healthUrl":   "/",
+      "metricPort":  9091,
+      "accessLevel": "swiggy",
+      "cpu": 2,
+      "memory": 25000,
+      "scalingDefinition": [
+        {
+            "minReplicas": 1,
+            "maxReplicas": 1,
+            "metric": "cpu",
+            "target": 75
+         }
+      ] 
+    }
+  ]
+}
