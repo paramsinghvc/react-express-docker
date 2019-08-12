@@ -5,12 +5,14 @@
   "main": "index.js",
   "author": "Nicolas Burgess",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "keywords": [],
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "nodemon": "1.19.1"
   }
 }

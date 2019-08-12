@@ -14,6 +14,9 @@ app.use(function (req, res, next) {
 	next();
 });
 
+app.get('/', (req, res) => {
+	res.send('<h1>Hello from Express Server</h1>');
+});
 // Serve the static files from the React app
 // app.use(express.static(path.join(__dirname, 'client/build')));
 

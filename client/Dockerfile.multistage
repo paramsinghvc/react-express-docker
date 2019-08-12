@@ -1,0 +1,13 @@
+FROM node:12.8.0-alpine
+LABEL maintainer="paramsinghvc@gmail.com"
+WORKDIR /client
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+FROM node:12.8.0-alpine
+RUN npm install -g serve
+COPY --from=build /client/build /client
+EXPOSE 3000
+CMD serve -s /client -l 3000

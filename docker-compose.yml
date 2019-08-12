@@ -8,7 +8,7 @@ services:
     depends_on:
       - server
   server:
-    build: ./
+    build: ./server
     ports:
       - 5000:5000
     container_name: react-express-server
