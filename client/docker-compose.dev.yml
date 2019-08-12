@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+      build:
+        context: ./
+        dockerfile: Dockerfile.dev
+      environment: 
+        - NODE_ENV=development
+        # - CHOKIDAR_USEPOLLING=true
+      ports:
+        - 3000:3000
+      volumes: 
+        - ./src:/app/src
+      command: npm start

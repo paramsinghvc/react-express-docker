@@ -4,9 +4,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App/App';
-
+if (module.hot) {
+    module.hot.accept();
+}
 render((
     <BrowserRouter>
-        <App/>
+        <App />
     </BrowserRouter>
 ), document.getElementById('root'));
