@@ -1,4 +1,4 @@
-FROM node:12.8.0-alpine
+FROM node:12.8.0-alpine AS build
 LABEL maintainer="paramsinghvc@gmail.com"
 WORKDIR /client
 COPY package.json package-lock.json ./

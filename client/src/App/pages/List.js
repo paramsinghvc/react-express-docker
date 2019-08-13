@@ -51,7 +51,7 @@ class List extends Component {
 
     return (
       <div className="App">
-        <h1>Client</h1>
+        <h1>Clientdddddd</h1>
         {/* Check to see if any items are found*/}
         {list.length ? (
           <div>
